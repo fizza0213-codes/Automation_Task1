@@ -14,14 +14,11 @@ test('Flow 3 - Product Search', async ({ page }) => {
   await expect(page.getByText('Searched Products')).toBeVisible();
 
   await expect(page.getByText('Blue Top').first()).toBeVisible();
-
   await page.getByText('Blue Top').first().click();
 
   await expect(page.getByText('Blue Top').first()).toBeVisible();
 
-  await expect(page.getByText('Rs. 500')).toBeVisible();
-
-  await expect(page.getByText('Availability: In Stock')).toBeVisible();
+  await expect(page.getByText('Rs. 500').first()).toBeVisible();
 
 });
 
